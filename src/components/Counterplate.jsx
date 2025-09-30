@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Counter = () => {
+const CounterApp = () => {
   // State setup (done for you)
   const [count, setCount] = useState(0);
   const [step, setStep] = useState(1);
@@ -8,29 +8,22 @@ const Counter = () => {
   // 🚨 LOGIC CHALLENGE 1: Increase count by step amount
   const increment = () => {
     // TODO: Add logic to increase count by the current step value
-    setCount((prev) => prev + step);
   };
 
   // 🚨 LOGIC CHALLENGE 2: Decrease count by step amount
   const decrement = () => {
     // TODO: Add logic to decrease count by the current step value
-    setCount((prev) => Math.max(0, prev - step));
   };
 
   // 🚨 LOGIC CHALLENGE 3: Reset count to zero
   const reset = () => {
     // TODO: Add logic to set count back to 0
-    setCount(0);
   };
 
   // 🚨 LOGIC CHALLENGE 4: Handle step input changes
-  const handleStepChange = ({ target }) => {
+  const handleStepChange = (e) => {
     // TODO: Add logic to update step from input
     // Hint: Convert string to number and handle invalid inputs
-    const value = target.value;
-    const intStepValue = parseInt(value) || 1;
-
-    setStep(intStepValue);
   };
 
   return (
@@ -216,4 +209,4 @@ const Counter = () => {
   );
 };
 
-export default Counter;
+export default CounterApp;
